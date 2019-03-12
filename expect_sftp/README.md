@@ -1,4 +1,5 @@
 # expect_sftp
+* expect自动登录sftp下载
 * linux expect安装
 
       yum install expect
