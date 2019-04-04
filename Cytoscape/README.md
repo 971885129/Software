@@ -21,6 +21,8 @@
 
 ![iamge](https://github.com/971885129/software-install-use/blob/master/Cytoscape/image/7.png)
 
+* 以column filter筛选为例
+
 ![iamge](https://github.com/971885129/software-install-use/blob/master/Cytoscape/image/8.png)
 
 ![iamge](https://github.com/971885129/software-install-use/blob/master/Cytoscape/image/9.png)
