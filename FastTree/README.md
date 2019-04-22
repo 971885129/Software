@@ -7,3 +7,6 @@
 * 多线程版
 
       wget www.microbesonline.org/fasttree/FastTreeMP
+## 运行
+
+      /biosoftware/FastTree/FastTreeMP aligned.fa > out
