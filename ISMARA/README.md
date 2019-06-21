@@ -71,8 +71,16 @@ make
  qmake-qt5 -makefile Ismara.pro
  make
 * 成功
-      
-      
+ 
+## 部署
+原有samtools版本过高
+      mv /usr/bin/samtools /usr/bin/samtools1.9
+      ln -s /biosoftware/ISMARA/ismara-client-1.1.2/utils/linux/samtools /usr/bin/samtools
+      ln -s /biosoftware/ISMARA/ismara-client-1.1.2/utils/linux/bgzip /usr/bin/bgzip
+      ln -s /biosoftware/ISMARA/ismara-client-1.1.2/utils/linux/sort-bed /usr/bin/sort-bed
+      ln -s /biosoftware/ISMARA/ismara-client-1.1.2/utils/linux/tabix /usr/bin/tabix
+
+
 
 
 
