@@ -4,4 +4,5 @@
 
 * 编译安装R
 
-    ./configure --prefix=/opt/R/R-3.4.2-openblas --enable-R-shlib --with-blas --with-lapack
+        ./configure --prefix=/opt/R/R-3.4.2-openblas --enable-R-shlib --with-blas --with-lapack
+        ln -s /media/sdb/user/wxm/software/openblas/lib/libopenblas.so libRblas.so
