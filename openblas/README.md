@@ -8,7 +8,9 @@
         ln -s /media/sdb/user/wxm/software/openblas/lib/libopenblas.so libRblas.so
 * 问题
 
-        编译安装R自定义安装目录（例如Install），结果会在Install和当前目录都有一个bin目录，都有R，若将Openblas链接到当前目录，则仅当前目录下的bin下的R可加速，若需将自定义目录中的R加速，则将libopenblsa.so链接到Install/lib64/R/lib 下。
+        编译安装R自定义安装目录（例如Install），结果会在Install和当前目录都有一个bin目录，都有R，
+        若将Openblas链接到当前目录，
+        则仅当前目录下的bin下的R可加速，若需将自定义目录中的R加速，则将libopenblsa.so链接到Install/lib64/R/lib 下。
 * 测试Openblas
 
         x <- matrix(1:(3000 * 3000), 3000, 3000)
