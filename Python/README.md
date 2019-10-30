@@ -1,2 +1,2 @@
 # Local Python Install
-* ./configure --prefix=custom path --with-ssl (--with-openssl=/usr/local/openssl)
+* ./configure --prefix=/home/wxm/software/Python-3.8.0/Install --with-openssl=/usr/bin/openssl
