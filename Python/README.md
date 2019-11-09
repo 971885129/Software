@@ -5,3 +5,7 @@
 
 ## 解决
 * 参考 https://stackoverflow.com/questions/5937337/building-python-with-ssl-support-in-non-standard-location
+
+* 修改pip源
+
+      pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
