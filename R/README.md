@@ -15,5 +15,5 @@
 
 ## 镜像选择
 
-    options(repos=structure(c(CRAN="http://mirrors.opencas.cn/cran/")))  
+    options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))  
     install.packages('ggplot2')
