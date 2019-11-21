@@ -15,5 +15,12 @@
 
 ## 镜像选择
 
-    options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))  
-    install.packages('ggplot2')
+* CRAN
+
+        options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))  
+        install.packages('ggplot2')
+* Bioconductor
+
+        options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
+        library(BiocManager)
+        BiocManager::install("DESeq2")
