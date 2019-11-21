@@ -12,3 +12,8 @@
 
     #curl 加入环境变量
     export=/opt/curl-7.54.0/bin:$PATH
+
+## 镜像选择
+
+    options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))  
+    install.packages('ggplot2')
