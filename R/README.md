@@ -1,4 +1,10 @@
-#R 安装
+## R 安装
+
+    ./configure --prefix=/home/wxm/software/R-3.6.1/Install --enable-R-shlib --with-blas --with-lapack
+    make && make install
+    cd lib
+    ln -s /home/wxm/software/OpenBLAS-0.3.6/Install/lib/libopenblas.so libRblas.so
+    #R 包批量安装
 
 ## 报错
 
@@ -21,6 +27,6 @@
         install.packages('ggplot2')
 * Bioconductor
 
-        options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
+            options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
         library(BiocManager)
         BiocManager::install("DESeq2")
