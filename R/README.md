@@ -1,12 +1,14 @@
 ## R 安装
 
-    ./configure --prefix=/home/wxm/software/R-3.6.1/Install --enable-R-shlib --with-blas --with-lapack
+   ./configure --prefix=/home/wxm/software/R-4.0.0/Install --enable-R-shlib --with-blas --with-lapack --with-readline=yes --with-libpng=yes --with-jpeglib=yes --with-libtiff=yes
+
     make && make install
     cd lib
     ln -s /home/wxm/software/OpenBLAS-0.3.6/Install/lib/libopenblas.so libRblas.so
     #R 包批量安装
 
 ## 报错
+*  问题1
 
     checking curl/curl.h usability... yes
     checking curl/curl.h presence... yes
@@ -18,6 +20,15 @@
 
     #curl 加入环境变量
     export=/opt/curl-7.54.0/bin:$PATH
+* 问题2
+
+    checking for pcre2-config... no
+    checking whether PCRE support suffices... no
+    configure: error: PCRE2 library and headers are required, or use --with-pcre1 and PCRE >= 8.32 with UTF-8 support
+
+
+
+
 
 ## 镜像选择
 
