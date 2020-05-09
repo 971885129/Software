@@ -38,6 +38,7 @@
       增加参数--with-pcre1
 * 问题3
 
+      checking whether pkg-config knows about cairo and pango... no
       Capabilities skipped:        PNG, TIFF, cairo
 * 解决
 
