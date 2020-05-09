@@ -10,11 +10,10 @@
 * --with-jpeglib
 * --with-libtiff
 
-
-    make && make install
-    cd lib
-    ln -s /home/wxm/software/OpenBLAS-0.3.6/Install/lib/libopenblas.so libRblas.so
-    #R 包批量安装
+       make && make install
+       cd lib
+       ln -s /home/wxm/software/OpenBLAS-0.3.6/Install/lib/libopenblas.so libRblas.so
+       #R 包批量安装
 
 ## 报错
 *  问题1
@@ -37,8 +36,12 @@
 * 解决
 
       增加参数--with-pcre1
+* 问题3
 
+      Capabilities skipped:        PNG, TIFF, cairo
+* 解决
 
+      
 
 
 
