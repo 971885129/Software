@@ -42,7 +42,28 @@
       Capabilities skipped:        PNG, TIFF, cairo
 * 解决
 
+       原因：pkg-config中找不到cairo和pango，但`ldconfig -p | grep cairo`又可以找到相关的库，
+       最后发现这几个库的`.pc`文件都保存在`/usr/lib64/pkgconfig/`中，因此通过在环境变量中添加
+       `export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/usr/lib64/pkgconfig`命令，即可使pkg-config
+       找到这两个库。
+* 问题4
+
+      通过以上处理解决了tiff的问题，但仍然没有`PNG, cairo`功能，查阅configure日志可以看到：
+      checking whether cairo including pango is >= 1.2 and works... no
+      checking for png_create_write_struct in -lpng... no
+      checking for png_create_write_struct in -lpng... (cached) no
+* 解决
+
+      解决问题过程中遇到yum中有库冲突，因此将冲突的库删除，`yum erase 1:libffi-3.0.10-alt2.x86_64`
+      还遇到yum库搜索不到目标软件，因此需增加yum库源
       
+      wget https://download-ib01.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm
+      rpm -Uvh epel-release*rpm
+      
+      yum直接安装pango和pango-devel会有部分依赖找不到，因此通过rpm安装这两个库及其依赖
+      rpm -qa | grep pango查询是否安装相关库
+      pkg-config --cflags pango查询库是否安装成功
+      ldconfig -p | grep cairo查询库？
 
 
 
