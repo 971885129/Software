@@ -64,7 +64,13 @@
       rpm -qa | grep pango查询是否安装相关库
       pkg-config --cflags pango查询库是否安装成功
       ldconfig -p | grep cairo查询库？
+* 问题5
 
+      make时报错：cannot find -lpng15  
+* 解决
+
+      安装libpng库
+      安装后ln -s /usr/lib64/libpng15.so.15 /usr/lib/libpng15.so
 
 
 
