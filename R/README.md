@@ -73,6 +73,14 @@
       安装后ln -s /usr/lib64/libpng15.so.15 /usr/lib/libpng15.so
 
 
+## 设置
+* R增加R包路径和下载R包地址
+
+      在R安装目录的etc下创建Rprofile.site
+      在该文件中添加一下内容：
+      .libPaths("/home/wxm/R/x86_64-pc-linux-gnu-library/3.6")
+      options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))
+
 
 ## 镜像选择
 
