@@ -80,7 +80,21 @@
       在该文件中添加一下内容：
       .libPaths("/home/wxm/R/x86_64-pc-linux-gnu-library/3.6")
       options(repos=structure(c(CRAN="https://mirrors.tuna.tsinghua.edu.cn/CRAN/")))
+* 更新R后重新安装R包
 
+      1.保存原R中已安装R包
+      oldip <- installed.packages()[ ,1]
+      save(oldip, file="/home/wxm/software/R-3.6.1/installedPackages.Rdata")
+      2.新版本R中安装R包
+      load("/home/wxm/software/R-3.6.1/installedPackages.Rdata")
+      installedPackage <- installed.packages()[ ,1]
+      packages2Install <- setdiff(oldip,installedPackage)
+      
+      
+### 注意
+
+   每个版本的R设置共同的安装目录，在安装新版本的R时只需：
+   update.packages(checkBuilt=T, ask=F)
 
 ## 镜像选择
 
