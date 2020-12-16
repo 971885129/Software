@@ -19,3 +19,12 @@
 
       yum install libffi-devel -y
       重装python
+
+## 问题3
+* Cannot uninstall 'PyYAML'. It is a distutils installed project and thus we cannot accurately determine which files belong to it which would lead to only a partial uninstall.
+
+## 解决
+* pip install pip==8.1.1
+* pip uninstall pyyaml
+* pip install --upgrade pip
+* pip install pysql-beam
