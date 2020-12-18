@@ -28,3 +28,11 @@
 * pip uninstall pyyaml
 * pip install --upgrade pip
 * pip install pysql-beam
+
+## 问题4
+* python3.6 使用rpy2包时 报错：
+
+      OSError: cannot load library '/media/sdc/tools/software/R/3.6.1/lib64/R/lib/libR.so': libRblas.so: cannot open shared object file: No such file or directory
+## 解决
+* export PATH="/home/wxm/software/R-3.6.3/Install/bin/:$PATH"
+* export LD_LIBRARY_PATH="/home/wxm/software/R-3.6.3/Install/lib64/R/lib:$LD_LIBRARY_PATH"
