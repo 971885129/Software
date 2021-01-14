@@ -107,3 +107,12 @@
             options(BioC_mirror="https://mirrors.tuna.tsinghua.edu.cn/bioconductor")
         library(BiocManager)
         BiocManager::install("DESeq2")
+
+## R包安装
+
+### png安装报错
+
+      libpng16.so.16: cannot open shared object file: No such file or directory
+* 解决
+
+      下载libpng源码包，安装，将安装路径下lib下的libpng16.so.16加入LD_LIBRARY_PATH和/media/sdc/tools/software/R/3.6.1/lib64/R/lib/
