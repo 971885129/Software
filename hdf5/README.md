@@ -13,6 +13,11 @@
       make
       make install
       
-* 安装后有问题
+* 动态库链接
 
-* 改为安装rpm
+      ln -s /opt/hdf5/hdf5-1.12.0/Install/lib/libhdf5.so.200.0.0 /lib64/libhdf5.so.200
+      ln -s /opt/hdf5/hdf5-1.12.0/Install/lib/libhdf5_hl.so.200.0.0 /lib64/libhdf5_hl.so.200
+
+* R 安装hdf5r
+
+     install.packages('hdf5r',configure.args="--with-hdf5=/opt/hdf5/hdf5-1.12.0/Install/bin/h5cc") 
