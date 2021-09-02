@@ -149,3 +149,16 @@
       
       module load gcc/5.5.0
 
+
+## Tips
+
+* geom_smooth
+
+      拟合多条折线，需在数据数据加上一列组别，将这多条直线归为同一组别即可拟合，若不加组别可能无结果
+* log transformation
+
+      data %>%mutate_at(vars(variable_here), ~log2(.))
+* aes_string
+
+      aes_string('PC1','PC2',colour='TumorPurity')可输入字符
+      aes_string('PC1','PC2',colour=Variable)可输入外部变量
