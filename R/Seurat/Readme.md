@@ -22,6 +22,9 @@
 
 
     ./bin/R CMD INSTALL --configure-vars='ICUDT_DIR=/home/test/software/R_library' stringi_1.3.1.tar.gz
+    /home/test/software/R_library为下载的压缩包本地位置
+    或者：
+    install.packages('stringi',configure-vars='ICUDT_DIR=/home/test/software/R_library')
 
 
 
