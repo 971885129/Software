@@ -36,3 +36,10 @@
 ## 解决
 * export PATH="/home/wxm/software/R-3.6.3/Install/bin/:$PATH"
 * export LD_LIBRARY_PATH="/home/wxm/software/R-3.6.3/Install/lib64/R/lib:$LD_LIBRARY_PATH"
+
+## 问题5
+* python 命令行backspace失效，打印出H^
+
+## 解决
+* 安装readline模块 pip install readline
+* readline可能出现依赖未安装，补充安装动态库解决
