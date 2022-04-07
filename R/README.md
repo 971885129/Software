@@ -113,16 +113,64 @@
       安装libpng库
       安装后ln -s /usr/lib64/libpng15.so.15 /usr/lib/libpng15.so
 
+* 问题6
+
+      maximal number of DLLs reached
+      
+      export R_MAX_NUM_DLLS=300:$R_MAX_NUM_DLLS
+      数值超过500会报错
+      R_MAX_NUM_DLLS bigger than 614 may exhaust open files limit
+      R3.5可能已修复该问题
+      
+* 问题7
+
+      t.test报错
+      
+      计算两组差异时，若两组数据完全一样，则报错
+      
+* 问题8
+
+      
 
 ## Tips
 
-* geom_smooth
+* 多条折线图拟合
 
-      拟合多条折线，需在数据数据加上一列组别，将这多条直线归为同一组别即可拟合，若不加组别可能无结果
-* log transformation
+      geom_smooth
+      需在数据数据加上一列组别，将这多条直线归为同一组别即可拟合，若不加组别可能无结果
 
-      data %>%mutate_at(vars(variable_here), ~log2(.))
-* aes_string
+* tidyverse 对数据框进行log2转换
 
+      data %>% mutate_at(vars(variable_here), ~log2(.+1))
+
+* ggplot 输入字符串进行作图
+
+      aes_string
       aes_string('PC1','PC2',colour='TumorPurity')可输入字符
       aes_string('PC1','PC2',colour=Variable)可输入外部变量
+      # 可参考
+      https://n3xtchen.github.io/n3xtchen/r/2016/12/12/r-ggplot-aes_string
+      
+* apply 函数输入多个参数
+
+      fxn <- function(var1,var2){command}
+      apply(dataframe,1,fxn,var2=2)
+
+* 相关性
+
+      cor求列之间的相关性
+
+* 距离计算
+
+      dist按行聚类
+
+* WGCNA输入数据格式
+
+      行为样本，列为基因
+
+* 
+
+
+
+
+
