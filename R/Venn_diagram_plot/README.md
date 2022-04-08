@@ -4,4 +4,10 @@
 可画9集合
 
     # 安装
-    install.packages("Vennerable", repos="http://R-Forge.R-project.org")
+    source("https://bioconductor.org/biocLite.R")
+    biocLite(c("RBGL","graph"))
+    install.packages("devtools")
+    library(devtools)
+    install_github("js229/Vennerable")
+    
+参考：https://github.com/js229/Vennerable
